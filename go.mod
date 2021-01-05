@@ -1,4 +1,4 @@
-module own-the-world
+module hackintoR
 
 go 1.15
 
