@@ -1,6 +1,7 @@
 //go:generate statik -src=../dist -dest . -f
 //go:generate go fmt statik/statik.go
 //https://cn.vuejs.org/v2/guide/instance.html
+//https://segmentfault.com/a/1190000012015667
 package main
 
 import (
