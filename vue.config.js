@@ -1,14 +1,14 @@
 // vue.config.js
 const path =  require('path');
 
-const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
-const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i; // 开启gzip压缩， 按需写入
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin; // 打包分析
+// const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
+// const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i; // 开启gzip压缩， 按需写入
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin; // 打包分析
 
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV);
 const resolve = (dir) => path.join(__dirname, dir);
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production' ? '/site/vue-demo/' : '/',  // 公共路径
+    publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',  // 公共路径
     indexPath: 'index.html' , // 相对于打包路径index.html的路径
     outputDir: process.env.outputDir || 'dist', // 'dist', 生产环境构建文件的目录
     assetsDir: 'static', // 相对于outputDir的静态资源(js、css、img、fonts)目录
@@ -46,35 +46,38 @@ module.exports = {
         //     });
         // 打包分析
         // 打包之后自动生成一个名叫report.html文件(可忽视)
-        if (IS_PROD) {
-            config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
-                {
-                    analyzerMode: "static"
-                }
-            ]);
-        }
+        // if (IS_PROD) {
+        //     config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
+        //         {
+        //             analyzerMode: "static"
+        //         }
+        //     ]);
+        // }
     },
-    configureWebpack: config => {
-        // 开启 gzip 压缩
-        // 需要 npm i -D compression-webpack-plugin
-        const plugins = [];
-        if (IS_PROD) {
-            plugins.push(
-                new CompressionWebpackPlugin({
-                    filename: "[path].gz[query]",
-                    algorithm: "gzip",
-                    test: productionGzipExtensions,
-                    threshold: 10240,
-                    minRatio: 0.8
-                })
-            );
-        }
-        config.plugins = [...config.plugins, ...plugins];
-    },
+    // configureWebpack: config => {
+    //     // 开启 gzip 压缩
+    //     // 需要 npm i -D compression-webpack-plugin
+    //     const plugins = [];
+    //     if (IS_PROD) {
+    //         plugins.push(
+    //             new CompressionWebpackPlugin({
+    //                 filename: "[path].gz[query]",
+    //                 algorithm: "gzip",
+    //                 test: productionGzipExtensions,
+    //                 threshold: 10240,
+    //                 minRatio: 0.8
+    //             })
+    //         );
+    //     }
+    //     config.plugins = [...config.plugins, ...plugins];
+    // },
     css: {
         extract: IS_PROD,
-        requireModuleExtension: false,// 去掉文件名中的 .module
+        // requireModuleExtension: false,// 去掉文件名中的 .module
         loaderOptions: {
+            css: {
+                esModule: false
+            },
             // 给 less-loader 传递 Less.js 相关选项
             less: {
                 // `globalVars` 定义全局对象，可加入全局变量

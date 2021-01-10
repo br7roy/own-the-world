@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### generate css via gulp
+```
+npm run buildcss
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

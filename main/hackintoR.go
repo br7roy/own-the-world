@@ -1,5 +1,4 @@
-//go:generate statik -src=../dist -dest .
-//go:generate statik -include=*.jpg,*.txt,*.html,*.css,*.js,*.png
+//go:generate statik -src=../dist -dest . -f
 //go:generate go fmt statik/statik.go
 //https://cn.vuejs.org/v2/guide/instance.html
 package main
@@ -66,7 +65,7 @@ func main() {
 }
 func parseFlags() {
 	config = &Config{}
-	flag.StringVar(&config.ServerHost, "p", "localhost:6660", "local server address")
+	flag.StringVar(&config.ServerHost, "hackintoR", "localhost:20000", "local server address")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
 		flag.PrintDefaults()
