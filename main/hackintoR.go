@@ -2,6 +2,7 @@
 //go:generate go fmt statik/statik.go
 //https://cn.vuejs.org/v2/guide/instance.html
 //https://segmentfault.com/a/1190000012015667
+//https://blog.csdn.net/jaykm/article/details/106214527
 package main
 
 import (
