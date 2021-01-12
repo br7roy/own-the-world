@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/1346078725989916674.gif">
+<!--    <img src="./assets/1346078725989916674.gif">-->
+<!--    <img src="./assets/1346173349861462017.jpg">-->
     <!--    <div>
           <p>
             If Element is successfully added to this project, you'll see an

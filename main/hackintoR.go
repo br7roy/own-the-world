@@ -9,6 +9,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/rakyll/statik/fs"
+	"hackintoR/main/opts"
 	_ "hackintoR/main/statik"
 	"io"
 	"log"
@@ -46,6 +47,9 @@ func main() {
 	var mux = http.NewServeMux()
 
 	mux.Handle("/", http.StripPrefix("/", http.FileServer(statikFS)))
+	opts.WakeOpts(opts.InitOptions{
+		Mux: mux,
+	})
 
 	go func(serverAddr string, m *http.ServeMux) {
 		if err = http.ListenAndServe(serverAddr, m); err != nil {
@@ -54,7 +58,8 @@ func main() {
 		}
 	}(config.ServerHost, mux)
 
-	openPage()
+	// for test don't open browser automatic
+	//openPage()
 
 	handleSignals()
 

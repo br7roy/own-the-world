@@ -93,7 +93,7 @@ module.exports = {
             errors: true
         },
         host: "localhost",
-        port: 8088, // 端口号
+        port: 20000, // 端口号
         https: false, // https:{type:Boolean}
         open: true, //配置自动启动浏览器
         hotOnly: true, // 热更新
