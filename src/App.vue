@@ -1,41 +1,38 @@
 <template>
   <div id="app">
-<!--    <img src="./assets/1346078725989916674.gif">-->
-<!--    <img src="./assets/1346173349861462017.jpg">-->
-    <!--    <div>
-          <p>
-            If Element is successfully added to this project, you'll see an
-            <code v-text="'<el-button>'"></code>
-            below
-          </p>
-          <el-button>el-button</el-button>
-        </div>
-        <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+
+
+    <img style="width: 100%; height: 100px" src="./assets/1346078725989916674.gif" >
+<!--    <div>-->
+<!--      <img class="el-page-header__content" src="./assets/1346078725989916674.gif">-->
+<!--    </div>-->
+
+    <!--    <img src="./assets/1346078725989916674.gif">-->
+    <!--    <img src="./assets/1346173349861462017.jpg">-->
+
     <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import NavMenu from "@/components/NavMenu";
+
 
 export default {
   name: 'app',
-  components: {
-    // HelloWorld,
-  }
+  components: {}
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #0c0000;
+  margin-top: 0px;
   /*background: #409EFF;*/
+
 
 }
 </style>

@@ -22,6 +22,8 @@ func WakeOpts(initOpts InitOptions) *Opts {
 func (se *Opts) RegHandler() {
 	se.mux.HandleFunc("/test", se.test)
 	se.mux.HandleFunc("/balance", se.balance)
+	se.mux.HandleFunc("flow", se.flow)
+	se.mux.HandleFunc("qqq", se.queryQueue)
 }
 
 // just a test Handler
@@ -63,5 +65,22 @@ func (se *Opts) balance(w http.ResponseWriter, r *http.Request) {
 	//w.Write(jsonEncode(0,string(marshal)))
 	w.WriteHeader(200)
 	w.Write(respSer(0, countryCapitalMap))
+
+}
+
+// 客流工具
+func (se *Opts) flow(w http.ResponseWriter, r *http.Request) {
+
+}
+
+// 查询队列
+func (se *Opts) queryQueue(w http.ResponseWriter, r *http.Request) {
+
+	//qMap := make(map[string]string)
+	//qMap["France"] = "Paris"
+	//qMap["Italy"] = "Roman"
+	//qMap["Japn"] = "Tokyo"
+	//qMap["India"] = "Madrid"
+	//qq := [...]int{, 2, 3, 4, 5}
 
 }
