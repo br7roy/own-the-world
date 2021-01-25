@@ -20,7 +20,7 @@ func WakeOpts(initOpts InitOptions) *Opts {
 	return opt
 }
 func (se *Opts) RegHandler() {
-	se.mux.HandleFunc("/test", se.test)
+	se.mux.HandleFunc("/go-test", se.test)
 	se.mux.HandleFunc("/balance", se.balance)
 	se.mux.HandleFunc("flow", se.flow)
 	se.mux.HandleFunc("qqq", se.queryQueue)
@@ -42,6 +42,7 @@ func (se *Opts) test(w http.ResponseWriter, r *http.Request) {
 // move the application to specify queue
 func (se *Opts) balance(w http.ResponseWriter, r *http.Request) {
 
+	//params, err := requestDeser(r)
 	params, err := getParams(r)
 	if err != nil {
 		w.Write(jsonEncode(1, map[string]interface{}{"error": "服务端错误：参数解析失败。"}))

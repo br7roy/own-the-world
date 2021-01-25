@@ -1,4 +1,4 @@
-package test
+package go_test
 
 import (
 	"fmt"
@@ -54,6 +54,6 @@ func TestShExec(t *testing.T) {
 }
 
 func TestQueue(t *testing.T) {
-	param := "root.yarn_mobfin,root.mob_ronghui,root.yarn_dataengine,root.yarn_qc,root.yarn_analyst,root.yarn_data_compliance,root.yarn_dpi,root.yarn_dataengine_ai,root.urgent,root.yarn_distcp_hfile,root.yarn_realestate,root.yarn_mobeye,root.yarn_marketplus,root.yarn_mobdashboard,root.yarn_etl,root.default,root.yarn_mobdi,root.yarn_app360,root.yarn_supplement_data,root.yarn_ga,root.yarn_datax,root.yanjiuyuan,root.app,\n"
+	//param := "root.yarn_mobfin,root.mob_ronghui,root.yarn_dataengine,root.yarn_qc,root.yarn_analyst,root.yarn_data_compliance,root.yarn_dpi,root.yarn_dataengine_ai,root.urgent,root.yarn_distcp_hfile,root.yarn_realestate,root.yarn_mobeye,root.yarn_marketplus,root.yarn_mobdashboard,root.yarn_etl,root.default,root.yarn_mobdi,root.yarn_app360,root.yarn_supplement_data,root.yarn_ga,root.yarn_datax,root.yanjiuyuan,root.app,\n"
 
 }

@@ -59,7 +59,7 @@ func main() {
 	}(config.ServerHost, mux)
 
 	// for test don't open browser automatic
-	//openPage()
+	openPage()
 
 	handleSignals()
 

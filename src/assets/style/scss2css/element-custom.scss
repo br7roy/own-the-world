@@ -1,7 +1,0 @@
-@import '../element-variables';//自定义的覆盖变量
-
-// Icon font path, required
-$--font-path: 'fonts';//字体的相对路径
-
-//  Element UI 的官方样式库
-@import '~element-ui/packages/theme-chalk/src/index';
